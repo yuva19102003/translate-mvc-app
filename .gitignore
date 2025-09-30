@@ -1,0 +1,21 @@
+# ASP.NET Core
+bin/
+obj/
+publish/
+TranslatorMVC/wwwroot/lib/
+
+# Visual Studio / Rider / VS Code
+.vscode/
+*.user
+*.suo
+*.vscode/
+
+# Docker
+docker-compose.override.yml
+**/Dockerfile*
+
+# Node / NPM (if ever used)
+node_modules/
+
+# Logs
+*.log

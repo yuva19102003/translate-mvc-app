@@ -1,0 +1,52 @@
+﻿@model TranslatorMVC.Models.TranslationRequest
+
+<div class="card shadow-sm mx-auto" style="max-width:600px;">
+    <div class="card-body">
+        <h2 class="card-title text-primary mb-4">Lingva Translator</h2>
+
+        <form method="post" class="row g-3">
+            <div class="col-12">
+                <label class="form-label">Text to Translate:</label>
+                <input type="text" name="Text" value="@Model.Text" class="form-control" placeholder="Enter text..." required />
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Source Language:</label>
+                <select name="SourceLang" class="form-select" required>
+                    <option value="">Select language</option>
+                    @foreach (var lang in ViewBag.Languages)
+                    {
+                        <option value="@lang.Key" selected="@(Model.SourceLang == lang.Key ? "selected" : null)">
+                            @lang.Value
+                        </option>
+                    }
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Target Language:</label>
+                <select name="TargetLang" class="form-select" required>
+                    <option value="">Select language</option>
+                    @foreach (var lang in ViewBag.Languages)
+                    {
+                        <option value="@lang.Key" selected="@(Model.TargetLang == lang.Key ? "selected" : null)">
+                            @lang.Value
+                        </option>
+                    }
+                </select>
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary w-100">Translate</button>
+            </div>
+        </form>
+
+        @if (!string.IsNullOrEmpty(Model.TranslatedText))
+        {
+            <div class="alert alert-success mt-4">
+                <h5>Translation:</h5>
+                <p>@Model.TranslatedText</p>
+            </div>
+        }
+    </div>
+</div>
