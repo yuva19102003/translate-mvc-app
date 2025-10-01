@@ -27,10 +27,10 @@ jobs:
         run: dotnet build TranslatorMVC.sln --no-restore --configuration Release
 
       - name: Run tests
-        run: dotnet test TranslatorMVC.Tests/TranslatorMVC.Tests.csproj --no-build --verbosity normal
+        run: dotnet test TranslatorMVC.Tests/TranslatorMVC.Tests.csproj --verbosity normal
 
       - name: Publish app
-        run: dotnet publish TranslatorMVC/TranslatorMVC.csproj -c Release -o ./out
+        run: dotnet publish TranslatorMVC/TranslatorMVC.csproj -c Release -o ./TranslatorMVC/publish
 
       - name: Log in to DockerHub
         uses: docker/login-action@v3
