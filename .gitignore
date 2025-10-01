@@ -12,7 +12,6 @@ TranslatorMVC/wwwroot/lib/
 
 # Docker
 docker-compose.override.yml
-**/Dockerfile*
 
 # Node / NPM (if ever used)
 node_modules/

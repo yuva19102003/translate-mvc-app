@@ -43,7 +43,7 @@ jobs:
           TAG=${{ github.run_number }}
           echo "Using tag: $TAG"
           ls
-          docker build -t ${{ env.IMAGE_NAME }}:$TAG .
+          docker build -t ${{ env.IMAGE_NAME }}:$TAG -f dockerfile .
           docker push ${{ env.IMAGE_NAME }}:$TAG
           echo "IMAGE_TAG=$TAG" >> $GITHUB_ENV
 
