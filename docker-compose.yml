@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   translatormvc:
-    image: yuva19102003/translator-mvc-app:latest
+    image: yuva19102003/translator-mvc-app:v9
     container_name: translatormvc
     ports:
       - "5270:5270"
