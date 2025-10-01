@@ -4,8 +4,8 @@ on:
   workflow_dispatch:   # Manual trigger
 
 env:
-  DOTNET_VERSION: '8.0.x'        # Change if different
-  IMAGE_NAME: your-dockerhub-username/translator-mvc-app
+  DOTNET_VERSION: '9.0.x'        # Change if different
+  IMAGE_NAME: yuva19102003/translator-mvc-app
 
 jobs:
   build-test-publish-docker:
