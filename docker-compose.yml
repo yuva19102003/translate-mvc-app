@@ -1,0 +1,8 @@
+version: "3.9"
+
+services:
+  translatormvc:
+    image: yuva19102003/translator-mvc-app:latest
+    container_name: translatormvc
+    ports:
+      - "5270:5270"
