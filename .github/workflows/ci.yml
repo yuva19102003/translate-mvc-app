@@ -58,4 +58,4 @@ jobs:
           git config user.email "github-actions@github.com"
           git add docker-compose.yml
           git commit -m "Update docker-compose image tag to ${{ env.IMAGE_TAG }}" || echo "No changes to commit"
-          git push
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/yuva19102003/translate-mvc-app.git HEAD:main
